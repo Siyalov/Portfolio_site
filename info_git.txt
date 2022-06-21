@@ -7,4 +7,3 @@ git commit -m "Comment" - Добавить комментарий к файлу,
 git push - Добавляет файл в github
 git pull - Скачать все новенькое из репозитория
 git checkout *file* - Скачать файл из репозитория
-sdsd
