@@ -1,0 +1,42 @@
+.app-wrapper { 
+    display: grid;
+    width: 1200px;
+    margin: 0 auto;
+    grid-template-areas:
+    "h h"
+    "m m"
+    "n c"
+    "f f";
+    grid-template-rows: 90px 0fr 0fr;
+    grid-template-columns: 3fr 7fr;
+}
+
+.header {
+    grid-area: h;
+    background-color: aqua;
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu {
+    grid-area: m;
+    background-color: gray;
+}
+
+.navbar {
+    width: 360px;
+    grid-area: n;
+    margin-top: 15px;
+   background-color: cadetblue;
+}
+
+.app-wrapper-content {
+    grid-area: c;
+    margin-top: 15px;
+    background-color: darkslateblue;
+}
+
+.footer {
+    grid-area: f;
+    background-color: violet;
+}
