@@ -14,7 +14,7 @@
 
 .header {
     grid-area: h;
-    background-color: aqua;
+    background-color: rgb(42, 145, 26);
     display: flex;
     justify-content: space-between;
 }
@@ -38,10 +38,10 @@
 .app-wrapper-content {
     grid-area: c;
     margin-top: 15px;
-    background-color: darkslateblue;
+    background-color: rgb(130, 118, 208);
 }
 
 .footer {
     grid-area: f;
-    background-color: violet;
+    background-color: rgb(141, 18, 141);
 }
