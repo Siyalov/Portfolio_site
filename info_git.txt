@@ -10,6 +10,99 @@ git pull - Скачать все новенькое из репозитория
 git checkout *file* - Скачать файл из репозитория
 
 
+Определение и отслеживание состояния файлов
+Определение состояния файлов в рабочей директории:
+$ git status
+
+Начать отслеживать файл:
+$ git add <filename>
+
+Индексация изменений:
+$ git add <filename>
+
+Просмотр неиндексированных изменений:
+$ git diff
+
+Просмотр индексированных изменений:
+$ git diff --staged
+
+
+Фиксация изменений
+Зафиксировать изменения:
+$ git commit
+
+Игнорирование индексации:
+$ git commit –a
+
+Добавление сообщения к коммиту:
+$ git commit -m 'Add description to my project'
+
+Ключи можно комбинировать:
+$ git commit –a -m 'Add description to my project'
+
+$ git log
+commit ca82a6dff817ec66f44342007202690a93763949
+Author: Scott Chacon &lt;schacon@gee-mail.com&gt;
+Date: Mon Mar 17 21:52:11 2008 -0700
+        changed the version number
+commit 085bb3bcb608e1e8451d4b2432f8ecbe6306e7e7
+Author: Scott Chacon &lt;schacon@gee-mail.com&gt;
+Date: Sat Mar 15 16:40:33 2008 -0700
+        removed unnecessary test
+commit
+a11bef06a3f659402fe7563abf99ad00de2209e6
+Author: Scott Chacon &lt;schacon@gee-mail.com&gt;
+Date: Sat Mar 15 10:31:28 2008 -0700
+        first commit
+
+
+
+Опции
+
+--stat — выведет статистику для каждого коммита
+
+--graph — строит текстовый граф
+
+--decorate — покажет “головы” (HEAD)
+
+--all — покажет все ветки
+
+Ограничение вывода
+
+--author 
+
+--grep
+
+Чтобы фильтровать коммиты по автору и ключевым словам одновременно: --all-match
+
+
+
+Удаление и перемещение файлов
+Удаление файлов
+
+git rm Filename — удаляет файл с диска, и убирает его из отслеживаемых файлов.
+
+Если файл был изменен и проиндексирован, то нужно добавить параметр -f:
+git rm -f Filename
+
+
+Перемещение файлов
+
+$ git mv README.md README
+
+то же, что и
+
+$ git rm README.md
+$ git add README
+
+В результате
+$ git status
+On branch master
+Changes to be committed:
+    (use "git reset HEAD <file>..." to unstage)
+        renamed: README.md -> README
+
+
 
 https://habr.com/ru/company/ruvds/blog/458504/
 Установка пакетов. Обычный вариант: npm install. Сокращённый вариант: npm i.
